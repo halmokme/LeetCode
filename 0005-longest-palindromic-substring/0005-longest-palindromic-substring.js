@@ -34,5 +34,6 @@ const calc = function(s, left, right) {
         left++;
         right--;
     }
+    dpVal[left][right] = true;
     return true;
 }
