@@ -27,9 +27,12 @@ const longestPalindrome = function(s) {
 const calc = function(s, left, right) {
     if(left > right) return true;
     if(dpVal[left][right]) return true;
-    if(s.charAt(left) === s.charAt(right)) {
-        return calc(s, left+1, right-1);
-    } else {
-        return false;
+    while (left < right) {
+        if(s.charAt(left) !== s.charAt(right)) {
+            return false;
+        }
+        left++;
+        right--;
     }
+    return true;
 }
