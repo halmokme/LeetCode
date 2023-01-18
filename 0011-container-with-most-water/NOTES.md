@@ -40,6 +40,6 @@ const maxArea = function(height) {
         if(height[left] > height[right]) right--;
         else left++;
     }
-    return maxSize;
+    return maxSize; 
 };
 ```
