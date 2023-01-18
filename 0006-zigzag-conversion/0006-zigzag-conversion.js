@@ -4,12 +4,11 @@
  * @return {string}
  */
 const convert = function(s, numRows) {
-  if (numRows === 1) return s
-  
   let result = ""
   let space = (numRows - 1) * 2
   let diff1 = space, diff2 = 0
-
+  
+  if (numRows === 1) return s;
   for (let i = 0; i < numRows; i++) {
     let currStrIdx = i
     let useFirst = true
