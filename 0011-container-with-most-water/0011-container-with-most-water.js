@@ -8,11 +8,8 @@ const maxArea = function(height) {
     while(right > left) {
         size = Math.min(height[left], height[right]) * (right - left);
         maxSize = Math.max(size, maxSize);
-        if(height[left] > height[right]) {
-            right--;
-        } else {
-            left++;
-        }
+        if(height[left] > height[right]) right--;
+        else left++;
     }
     return maxSize;
 };
