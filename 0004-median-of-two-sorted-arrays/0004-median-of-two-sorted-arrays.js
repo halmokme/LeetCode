@@ -5,11 +5,10 @@
  */
 const findMedianSortedArrays = function(nums1, nums2) {
     if(nums1.length > nums2.length) return findMedianSortedArrays(nums2, nums1);
-    let x = nums1.length;
-    let y = nums2.length;
-    
+    let x = nums1.length, y = nums2.length;
     let low = 0;
     let high = x;
+    
     while(low <= high) {
         let partitionX = parseInt((low + high) / 2);
         let partitionY = parseInt((x + y + 1) / 2) - partitionX;
