@@ -1,7 +1,4 @@
-/**
- * @param {number[]} height
- * @return {number}
- */
+
 const maxArea = function(height) {
     let size = 0, maxSize = 0;
     let left = 0, right = height.length-1;
