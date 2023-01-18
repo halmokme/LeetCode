@@ -13,7 +13,8 @@
 const addTwoNumbers = function(l1, l2) {
     let result = new ListNode(0);
     let link = result;
-    let l1num='', l2num='';
+    let l1num='';
+    let l2num='';
     let sumArr;
     while(l1){
         l1num += l1.val;
