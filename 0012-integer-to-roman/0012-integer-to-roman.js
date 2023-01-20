@@ -16,7 +16,6 @@ const intToRoman = function(num) {
         result += 'CM';
         num -= 900;
     }
-
     // 500
     n = num / 500;
     num = num % 500;
@@ -25,7 +24,6 @@ const intToRoman = function(num) {
         result += 'CD';
         num -= 400;
     }
-
     // 100
     n = num / 100;
     num = num % 100;
@@ -34,7 +32,6 @@ const intToRoman = function(num) {
         result += 'XC';
         num -= 90;
     }
-
     // 50
     n = num / 50;
     num = num % 50;
@@ -43,7 +40,6 @@ const intToRoman = function(num) {
         result += 'XL';
         num -= 40;
     }
-
     // 10
     n = num / 10;
     num = num % 10;
@@ -52,7 +48,6 @@ const intToRoman = function(num) {
         result += 'IX';
         num -= 9;
     }
-
     // 5
     n = num / 5;
     num = num % 5;
@@ -61,7 +56,6 @@ const intToRoman = function(num) {
         result += 'IV';
         num -= 4;
     }
-
    // 1
    n = num / 1; 
    result += 'I'.repeat(n);
