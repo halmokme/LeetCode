@@ -26,5 +26,6 @@ const letterCombinations = function(digits) {
         }
     }
     permute('', 0);
+    
     return result;
 };
