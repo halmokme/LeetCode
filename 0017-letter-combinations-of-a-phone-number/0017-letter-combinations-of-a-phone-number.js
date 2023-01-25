@@ -16,15 +16,15 @@ const letterCombinations = function(digits) {
         9: ['w', 'x', 'y', 'z'],
     }
     const result = [];
-    const recursive = (el, idx) => {
+    const permute = (el, idx) => {
         if(idx === digits.length) {
             result.push(el);
             return;
         }
         for(let i=0; i<map[digits[idx]].length; i++) {
-            recursive(el + map[digits[idx]][i], idx+1);
+            permute(el + map[digits[idx]][i], idx+1);
         }
     }
-    recursive('', 0);
+    permute('', 0);
     return result;
 };
