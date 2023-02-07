@@ -60,4 +60,6 @@ words = ["dhvf","sind","ffsl","yekr","zwzq","kpeo","cila","tfty","modg","ztjg","
 
 참고 : https://leet-codes.blogspot.com/2022/10/substring-with-concatenation-of-all.html  
 
+리트코드 문제들이 많고 해설도 잘되어있어서 참고하기에 좋다
+
  
