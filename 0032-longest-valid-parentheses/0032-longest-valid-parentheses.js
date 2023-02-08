@@ -14,12 +14,11 @@ const longestValidParentheses = function(s) {
             stack.pop();
             if(stack.length) {
                 len = i - stack[stack.length-1];
-                max = max > len ? max : len;
+                max = Math.max(len, max);
             } else {
                 stack.push(i);
             }
         }
-        console.log(len, max, stack)
     }
     return max;
 };
