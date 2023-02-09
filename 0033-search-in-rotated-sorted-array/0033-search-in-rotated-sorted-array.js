@@ -6,9 +6,10 @@
 const search = function(nums, target) {
     
     let left = 0, right = nums.length-1;
+    let mid;
 
     while(right >= left) {
-        let mid = Math.floor((left + right) / 2);
+        mid = Math.floor((left + right) / 2);
         if(nums[mid] === target) return mid;
 
         if(nums[mid] >= nums[left]) {
@@ -19,5 +20,6 @@ const search = function(nums, target) {
             else right = mid - 1;
         }
     }
+    
     return -1;
 };
