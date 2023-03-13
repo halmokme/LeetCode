@@ -22,13 +22,13 @@ const isHappy = function(n) {
     
     
     // while loop
-    let sum = n;
-    let stack = [];
-    while(1) {
-        sum = (sum+'').split('').reduce((acc, val) => acc + Math.pow(val, 2), 0);
-        if(stack.indexOf(sum) > -1) return false;
-        if(sum === 1) return true;
-        stack.push(sum);
-    }
+    // let sum = n;
+    // let stack = [];
+    // while(1) {
+    //     sum = (sum+'').split('').reduce((acc, val) => acc + Math.pow(val, 2), 0);
+    //     if(stack.indexOf(sum) > -1) return false;
+    //     if(sum === 1) return true;
+    //     stack.push(sum);
+    // }
 
 };
