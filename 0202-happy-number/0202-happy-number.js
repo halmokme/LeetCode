@@ -6,7 +6,8 @@ const isHappy = function(n) {
     
     // recursive
     let res = true;
-    const recursive = (sum, arr) => {
+    let arr = [];
+    const recursive = (sum) => {
         sum = (sum+'').split('').reduce((acc, val) => acc + Math.pow(val, 2), 0);
         if(sum === 1) return;
         if(arr.indexOf(sum) !== -1) {
@@ -14,9 +15,9 @@ const isHappy = function(n) {
             return;
         };
         arr.push(sum);
-        recursive(sum, arr);
+        recursive(sum);
     }
-    recursive(n, []);
+    recursive(n);
     return res;
     
     
