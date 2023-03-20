@@ -3,8 +3,19 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 const moveZeroes = function(nums) {     
-    for(let i=nums.length-1; i>=0; i--) {
-        nums[i] === 0 && nums.splice(i, 1) && nums.push(0);
+    let low = 0, high = low + 1;
+
+    while (high <= nums.length - 1) {
+        if (nums[low] !== 0) {
+            low++;
+            high++;
+        } else {
+            if (nums[high] !== 0) {
+                [nums[low], nums[high]] = [nums[high], nums[low]];
+                low++;
+            }
+            high++;
+        }
     }
-    return nums;
+    return nums; 
 };
