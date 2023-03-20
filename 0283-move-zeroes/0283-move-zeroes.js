@@ -3,7 +3,8 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 const moveZeroes = function(nums) {     
-    let low = 0, high = low + 1;
+    let low = 0
+    let high = low + 1;
 
     while (high <= nums.length - 1) {
         if (nums[low] !== 0) {
