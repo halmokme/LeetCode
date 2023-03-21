@@ -9,5 +9,5 @@ const isUgly = function(n) {
         else if(n % 5 === 0) n /= 5;
         else return false;
     }
-    return n===1;
+    return n === 1;
 };
