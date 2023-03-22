@@ -8,7 +8,8 @@ const wordPattern = function(pattern, s) {
     let arr = s.split(' ')
     let tmp = {};
 
-    if(pattern.length !== arr.length || new Set([...pattern]).size !== new Set(arr).size) return false;
+    if(pattern.length !== arr.length) return false;
+    if(new Set([...pattern]).size !== new Set(arr).size) return false;
 
     for(let i=0; i<pattern.length; i++) {
         if(!tmp[pattern[i]]) tmp[pattern[i]] = arr[i];
