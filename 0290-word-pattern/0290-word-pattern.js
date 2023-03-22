@@ -5,7 +5,8 @@
  */
 const wordPattern = function(pattern, s) {
 
-    let arr = s.split(' '), tmp = {};
+    let arr = s.split(' ')
+    let tmp = {};
 
     if(pattern.length !== arr.length || new Set([...pattern]).size !== new Set(arr).size) return false;
 
