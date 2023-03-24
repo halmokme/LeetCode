@@ -4,6 +4,5 @@ function isPowerOfFour(n: number): boolean {
     //     n /= 4;
     // }
     // return n === 1;
-    const expo = (Math.log2(n) / 2).toFixed(10);
-    return +expo % 1 === 0 ? true : false;
+    return Number.isInteger(Math.log2(n) / 2);
 };
