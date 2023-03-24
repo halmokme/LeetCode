@@ -1,7 +1,7 @@
 function isPowerOfFour(n: number): boolean {
-    while(n > 1) {
-        if(n % 4 === 0) n /= 4;
-        else return false;
+    if(n === 0) return false;
+    while(n % 4 === 0) {
+        n /= 4;
     }
     return n === 1;
 };
