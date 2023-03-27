@@ -8,9 +8,7 @@ function reverseVowels(s: string): string {
         if(vowel.indexOf(arr[left]) === -1) left++;
         if(vowel.indexOf(arr[right]) === -1) right--;
         if(vowel.indexOf(arr[left]) > -1 && vowel.indexOf(arr[right]) > -1 ) {
-            let tmp = s[left];
-            arr[left] = s[right];
-            arr[right] = tmp;
+            [arr[left], arr[right]] = [arr[right], arr[left]];
             left++;
             right--;
         }
