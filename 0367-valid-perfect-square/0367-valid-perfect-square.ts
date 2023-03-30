@@ -1,11 +1,18 @@
 function isPerfectSquare(num: number): boolean {
+    
+    /*
+    1 = 1
+    4 = 1, 4
+    9 = 1, 4, 9
+    16 = 1, 4, 9, 16
+    25 = 1, 4, 9, 16, 25
+    36 = 1, 4, 9, 16, 25, 36
+    */
+    let a = 1;
 
-    if(num === 1) return true;
-
-    let n = Math.ceil(num / 2);
-
-    for(let i=1; i<=n; i++) {
-        if(i * i === num) return true;
-        if(i * i > num) return false;
+    while (num > 0) {
+        num = num - a;
+        a += 2;
     }
+    return num === 0;
 };
