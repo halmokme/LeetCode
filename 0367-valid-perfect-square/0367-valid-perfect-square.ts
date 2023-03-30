@@ -12,7 +12,7 @@ function isPerfectSquare(num: number): boolean {
     let a = 1;
 
     while (num > 0) {
-        num = num - a;
+        num -= a;
         a += 2;
     }
     return num === 0;
