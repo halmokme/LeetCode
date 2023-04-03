@@ -1,8 +1,13 @@
 function findTheDifference(s: string, t: string): string {
-    let arr = s.split('');
-    for(let i=0; i<t.length; i++) {
-        let idx = arr.indexOf(t[i]);
-        if(idx === -1) return t[i];
-        else arr.splice(idx, 1);
+    let sumS = 0;
+    for(let i=0; i<s.length; i++) {
+        sumS += s.charCodeAt(i);
     }
+
+    let sumT = 0;
+    for(let i=0; i<t.length; i++) {
+        sumT += t.charCodeAt(i);
+    }
+
+    return String.fromCharCode(sumT - sumS);
 };
