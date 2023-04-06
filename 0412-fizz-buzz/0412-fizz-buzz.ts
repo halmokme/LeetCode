@@ -1,11 +1,14 @@
+const getVal = (i: number): string => {
+    if(i % 3 === 0 && i % 5 === 0) return 'FizzBuzz';
+    if(i % 3 === 0) return 'Fizz';
+    if(i % 5 === 0) return 'Buzz';
+    return i.toString();
+}
+
 function fizzBuzz(n: number): string[] {
-    if(n === 1) return ['1'];
-    let res = ['1', '2', 'Fizz'];
-    for(let i=3; i<=n; i++) {
-        if(i % 3 === 0 && i % 5 === 0) res[i-1] = 'FizzBuzz';
-        else if(i % 3 === 0) res[i-1] = 'Fizz';
-        else if(i % 5 === 0) res[i-1] = 'Buzz';
-        else res[i-1] = i+'';
+    let res = [];
+    for(let i=1; i<=n; i++) {
+        res.push(getVal(i));
     }
     return res;
 };
