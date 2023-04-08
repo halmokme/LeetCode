@@ -1,4 +1,4 @@
 function countSegments(s: string): number {
-    const segment = s.match(/[^ ]+/g);
-    return segment ? segment.length : 0
+    if(!/\S/.test(s)) return 0;
+    else return s.trim().split(/\s+/).length;
 };
