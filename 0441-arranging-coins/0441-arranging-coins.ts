@@ -1,8 +1,8 @@
 function arrangeCoins(n: number): number {
     let row = 1;
-    while (n >= 0) {
+    while (n >= row) {
         n -= row;
         row++;
     } 
-    return row - 2;
+    return row - 1;
 };
