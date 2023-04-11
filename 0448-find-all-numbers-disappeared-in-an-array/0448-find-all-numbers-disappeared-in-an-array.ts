@@ -4,7 +4,6 @@ function findDisappearedNumbers(nums: number[]): number[] {
       let num = Math.abs(nums[i]);
       nums[num-1] = Math.abs(nums[num-1]) * -1;
   }
-  console.log(nums)
   for (let i=0; i<nums.length; i++) {
       if (nums[i] > 0) res.push(i+1);
   }
