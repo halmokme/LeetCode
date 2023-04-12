@@ -3,8 +3,8 @@ function findContentChildren(g: number[], s: number[]): number {
   s.sort((a, b) => a - b);
   
   let res = 0;
-  for (const cookie of s) {
-    if (cookie >= g[res]) res++;
+  for (let i=0; i<s.length; i++) {
+    if (s[i] >= g[res]) res++;
   }
 
   return res;
