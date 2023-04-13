@@ -5,7 +5,7 @@ function repeatedSubstringPattern(s: string): boolean {
     let pattern = '';
     for(let i=0; i<s.length/2; i++) {
         pattern += s[i];
-        if(s.split(pattern).join('').length === 0) return true;
+        if(!s.split(pattern).join('').length) return true;
     }
     
     return false;
