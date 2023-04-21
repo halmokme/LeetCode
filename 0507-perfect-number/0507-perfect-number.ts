@@ -1,10 +1,12 @@
 function checkPerfectNumber(num: number): boolean {  
-  let sum = 0;
-  
-  if (num === 0) return false;
-  for (let i=1; i<=num/2; i++) {
-    if (num % i === 0) sum += i;
+  let sqrt = Math.sqrt(num), sum = 1;
+    
+  if (num < 2) return false;
+    
+  for (let i=2; i<=sqrt; i++) {
+    if (num % i === 0) sum += (i === sqrt) ? i : i + num/i 
   }
-  
+    
+  console.log(sum)
   return sum === num;
 };
