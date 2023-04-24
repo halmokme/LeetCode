@@ -1,7 +1,6 @@
 function findLUSlength(a: string, b: string): number {
-    if(!b.includes(a) || !a.includes(b)) {
-        if(a.length >= b.length) return a.length;
-        else return b.length;
+    if(!a.includes(b) || !b.includes(a)) {
+        return Math.max(a.length, b.length);
     }
     else return -1;
 };
