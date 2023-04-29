@@ -7,8 +7,8 @@ function findLHS(nums: number[]): number {
         lhs[num] = lhs[num]+1 || 1;
     }
 
-    for(let i=0; i<nums.length; i++) {
-        if(lhs[nums[i]+1]) res = Math.max(res, lhs[nums[i]]+lhs[nums[i]+1]);
+    for(let i=1; i<nums.length; i++) {
+        if(lhs[nums[i]-1]) res = Math.max(res, lhs[nums[i]]+lhs[nums[i]-1]);
     }
 
     return res;
