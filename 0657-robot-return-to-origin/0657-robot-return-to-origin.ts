@@ -1,11 +1,11 @@
 function judgeCircle(moves: string): boolean {
-    let left = 0, right = 0, up = 0, down = 0;
+    let x = 0, y = 0;
     
     for(let move of moves) {
-        if(move === 'L') left++;
-        else if(move === 'R') right++;
-        else if(move === 'U') up++;
-        else if(move === 'D') down++
+        if(move === 'L') x--;
+        else if(move === 'R') x++;
+        else if(move === 'U') y++;
+        else if(move === 'D') y--;
     }
-    return (left === right && up === down);
+    return !x && !y;
 };
