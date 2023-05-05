@@ -8,7 +8,7 @@ function findErrorNums(nums: number[]): number[] {
         if(nums[i] > nums[i-1]+1) missing = nums[i-1]+1;
     }
 
-    if(nums[nums.length-1] === nums.length-1) missing = nums.length;
+    if(nums.at(-1) === nums.length-1) missing = nums.length;
 
     return [duplicate, missing];
 };
