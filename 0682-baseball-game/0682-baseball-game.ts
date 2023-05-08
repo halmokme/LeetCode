@@ -1,13 +1,12 @@
 function calPoints(operations: string[]): number {
     
-    let oper = [];
-
-    for(let i=0; i<operations.length; i++) {
-        if(operations[i] === 'C') oper.pop();
-        else if(operations[i] === 'D') oper.push(oper[oper.length-1] * 2);
-        else if(operations[i] == '+') oper.push(oper[oper.length-1] + oper[oper.length-2]);
-        else oper.push(+operations[i]);
-    }
-
-    return oper.reduce((acc, val) => acc + val, 0);
+    let arr = operations.reduce((acc, val) => {
+        if(val === 'C') acc.pop();
+        else if(val === 'D') acc.push(acc[acc.length-1] * 2);
+        else if(val === '+') acc.push(acc[acc.length-1] + acc[acc.length-2]);
+        else acc.push(+val);
+        return acc;
+    }, [])
+    
+    return arr.reduce((acc, val) => acc + val, 0);
 };
